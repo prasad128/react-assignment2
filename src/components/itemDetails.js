@@ -15,6 +15,8 @@ const ItemsPage = () => {
     console.log(item);
     item = JSON.stringify(item);
     localStorage.setItem("Item", item);
+    alert("Item added to the cart");
+    history.push("/");
     console.log("Stored Item -", item);
   };
 
@@ -24,7 +26,7 @@ const ItemsPage = () => {
         <button
           id="active"
           onClick={() => handleClick(item)}
-          className="text-sm text-gray-600 border-2 px-2 py-px hover:bg-gray-600 hover:border-transparent hover:text-white focus:outline-none rounded border-gray-600"
+          className="px-2 py-px text-sm text-gray-600 border-2 border-gray-600 rounded hover:bg-gray-600 hover:border-transparent hover:text-white focus:outline-none"
         >
           Add To Cart
         </button>
